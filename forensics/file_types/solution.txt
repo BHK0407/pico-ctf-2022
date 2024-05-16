@@ -1,0 +1,500 @@
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file Flag.pdf
+Flag.pdf: shell archive text
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ subl Flag.pdf                
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ sh ./Flag.pdf                                    
+x - created lock directory _sh00046.
+x - extracting flag (text)
+./Flag.pdf: 119: uudecode: not found
+restore of flag failed
+flag: MD5 check failed
+x - removed lock directory _sh00046.
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ sh ./Flag.pdf
+x - created lock directory _sh00046.
+x - extracting flag (text)
+x - removed lock directory _sh00046.
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ls -a 
+.  ..  flag  Flag.pdf
+
+
+
+
+
+
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ 
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ 
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ 
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ 
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ 
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ 
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ subl flag    
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file flag    
+flag: current ar archive
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man archive          
+No manual entry for archive
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man ar     
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ar xv flag           
+x - flag
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ls -a
+.  ..  flag  Flag.pdf
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file flag
+flag: cpio archive; device 234, inode 37426, mode 100644, uid 0, gid 0, modified Thu Mar 16 01:40:17 2023, 510 bytes "flag"
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ subl flag
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man cpio
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ mv flag flag.cpio    
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ cpio --file flag.cpio --extract
+2 blocks
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ls   
+flag  flag.cpio  Flag.pdf
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file filag
+filag: cannot open `filag' (No such file or directory)
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file flag 
+flag: bzip2 compressed data, block size = 900k
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man bzip2        
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ bunzip2 flag                             
+bunzip2: Can't guess original name for flag -- using flag.out
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ls
+flag.cpio  flag.out  Flag.pdf
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file flag
+flag: cannot open `flag' (No such file or directory)
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file flag.out
+flag.out: gzip compressed data, was "flag", last modified: Thu Mar 16 01:40:17 2023, from Unix, original size modulo 2^32 327
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man gzip 
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ mv flag.out flag.gz  
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ gunzip flag.gz
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ls
+flag  flag.cpio  Flag.pdf
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ subl flag    
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file flag    
+flag: lzip compressed data, version: 1
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man lzip           
+No manual entry for lzip
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man lzip
+No manual entry for lzip
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lzip
+Command 'lzip' not found, did you mean:
+  command 'plzip' from deb plzip
+  command 'mzip' from deb mtools
+  command 'lzop' from deb lzop
+  command 'lzmp' from deb lzma
+  command 'clzip' from deb clzip
+  command 'gzip' from deb gzip
+  command 'zip' from deb zip
+  command 'rzip' from deb rzip
+  command 'wzip' from deb wzip
+  command 'lrzip' from deb lrzip
+Try: sudo apt install <deb name>
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ sudo apt install lzip                              
+[sudo] password for kali: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  lzip
+0 upgraded, 1 newly installed, 0 to remove and 35 not upgraded.
+Need to get 89.1 kB of archives.
+After this operation, 180 kB of additional disk space will be used.
+Get:1 http://mirror.aktkn.sg/kali kali-rolling/main amd64 lzip amd64 1.24.1-1 [89.1 kB]
+Fetched 89.1 kB in 1s (64.8 kB/s)
+Selecting previously unselected package lzip.
+(Reading database ... 387180 files and directories currently installed.)
+Preparing to unpack .../lzip_1.24.1-1_amd64.deb ...
+Unpacking lzip (1.24.1-1) ...
+Setting up lzip (1.24.1-1) ...
+update-alternatives: using /usr/bin/lzip.lzip to provide /usr/bin/lzip (lzip) in auto mode
+update-alternatives: using /usr/bin/lzip.lzip to provide /usr/bin/lzip-compressor (lzip-compressor) in auto mode
+update-alternatives: using /usr/bin/lzip.lzip to provide /usr/bin/lzip-decompressor (lzip-decompressor) in auto mode
+Processing triggers for man-db (2.12.0-3) ...
+Processing triggers for kali-menu (2023.4.7) ...
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lzip man
+lzip: man: Can't open input file: No such file or directory
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man lzip
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lzip -d flag
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ls          
+flag.cpio  flag.out  Flag.pdf
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file flag.out
+flag.out: LZ4 compressed data (v1.4+)
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$  man LZ4
+No manual entry for LZ4
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man lz               
+No manual entry for lz
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man lz               
+No manual entry for lz
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lz          
+Command 'lz' not found, but can be installed with:
+sudo apt install mtools
+Do you want to install it? (N/y)y
+sudo apt install mtools
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Suggested packages:
+  floppyd
+The following NEW packages will be installed:
+  mtools
+0 upgraded, 1 newly installed, 0 to remove and 35 not upgraded.
+Need to get 193 kB of archives.
+After this operation, 399 kB of additional disk space will be used.
+Get:1 http://kali.download/kali kali-rolling/main amd64 mtools amd64 4.0.43-1 [193 kB]
+Fetched 193 kB in 1s (150 kB/s)
+Selecting previously unselected package mtools.
+(Reading database ... 387190 files and directories currently installed.)
+Preparing to unpack .../mtools_4.0.43-1_amd64.deb ...
+Unpacking mtools (4.0.43-1) ...
+Setting up mtools (4.0.43-1) ...
+Processing triggers for kali-menu (2023.4.7) ...
+Processing triggers for man-db (2.12.0-3) ...
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lz
+Reading directory of  standard input.
+gzip: compressed data not read from a terminal. Use -f to force decompression.
+For help, type: gzip -h
+tar: This does not look like a tar archive
+tar: Exiting with failure status due to previous errors
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man lz
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ls                              
+flag.cpio  flag.out  Flag.pdf
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ tar xvf flag.out                
+tar: This does not look like a tar archive
+tar: Exiting with failure status due to previous errors
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lz4
+Command 'lz4' not found, but can be installed with:
+sudo apt install lz4
+Do you want to install it? (N/y)y
+sudo apt install lz4
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  lz4
+0 upgraded, 1 newly installed, 0 to remove and 35 not upgraded.
+Need to get 91.3 kB of archives.
+After this operation, 246 kB of additional disk space will be used.
+Get:1 http://kali.download/kali kali-rolling/main amd64 lz4 amd64 1.9.4-2 [91.3 kB]
+Fetched 91.3 kB in 1s (111 kB/s)
+Selecting previously unselected package lz4.
+(Reading database ... 387264 files and directories currently installed.)
+Preparing to unpack .../archives/lz4_1.9.4-2_amd64.deb ...
+Unpacking lz4 (1.9.4-2) ...
+Setting up lz4 (1.9.4-2) ...
+Processing triggers for man-db (2.12.0-3) ...
+Processing triggers for kali-menu (2023.4.7) ...
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man lz4
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lz4 -d flag.out
+Cannot determine an output filename 
+Incorrect parameters
+Usage : 
+      lz4 [arg] [input] [output] 
+
+input   : a filename 
+          with no FILE, or when FILE is - or stdin, read standard input
+Arguments : 
+ -1     : Fast compression (default) 
+ -9     : High compression 
+ -d     : decompression (default for .lz4 extension)
+ -z     : force compression 
+ -D FILE: use FILE as dictionary 
+ -f     : overwrite output without prompting 
+ -k     : preserve source files(s)  (default) 
+--rm    : remove source file(s) after successful de/compression 
+ -h/-H  : display help/long help and exit 
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lz4 -d flag.out picoFlag
+flag.out             : decoded 265 bytes                                       
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ls                      
+flag.cpio  flag.out  Flag.pdf  picoFlag
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file picoFlag
+picoFlag: LZMA compressed data, non-streamed, size 254
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lzma                    
+lzma: Compressed data cannot be written to a terminal
+lzma: Try `lzma --help' for more information.
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man lzma
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lzma -d
+lzma: Compressed data cannot be read from a terminal
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man lzma
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ unlzma picoFlag           
+unlzma: picoFlag: Filename has an unknown suffix, skipping
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ls     
+flag.cpio  flag.out  Flag.pdf  picoFlag
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file picoFlag
+picoFlag: LZMA compressed data, non-streamed, size 254
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file picoFlag.lzma
+picoFlag.lzma: cannot open `picoFlag.lzma' (No such file or directory)
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ unlzma picoFlag.lzma
+unlzma: picoFlag.lzma: No such file or directory
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ mv picoFlag picoFlag.lzma
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ unlzma picoFlag.lzma
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ls
+flag.cpio  flag.out  Flag.pdf  picoFlag
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ flag picoFlag     
+Command 'flag' not found, did you mean:
+  command 'flac' from deb flac
+  command 'mflag' from deb mblaze
+  command 'blag' from deb blag
+  command 'flang' from deb flang-7
+  command 'flog' from deb flog
+Try: sudo apt install <deb name>
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file picoFlag     
+picoFlag: lzop compressed data - version 1.040, LZO1X-1, os: Unix
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man lzop                 
+No manual entry for lzop
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lzop   
+Command 'lzop' not found, but can be installed with:
+sudo apt install lzop
+Do you want to install it? (N/y)y
+sudo apt install lzop
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  lzop
+0 upgraded, 1 newly installed, 0 to remove and 35 not upgraded.
+Need to get 84.2 kB of archives.
+After this operation, 168 kB of additional disk space will be used.
+Get:1 http://mirror.kku.ac.th/kali kali-rolling/main amd64 lzop amd64 1.04-2 [84.2 kB]
+Fetched 84.2 kB in 1s (60.9 kB/s)
+Selecting previously unselected package lzop.
+(Reading database ... 387275 files and directories currently installed.)
+Preparing to unpack .../archives/lzop_1.04-2_amd64.deb ...
+Unpacking lzop (1.04-2) ...
+Setting up lzop (1.04-2) ...
+Processing triggers for man-db (2.12.0-3) ...
+Processing triggers for kali-menu (2023.4.7) ...
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ man lzop
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lzop -x picoFlag
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ls              
+flag  flag.cpio  flag.out  Flag.pdf  picoFlag
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file picoFlag
+picoFlag: lzop compressed data - version 1.040, LZO1X-1, os: Unix
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ mv picoFlag picoFlag.lzop
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lzop -x picoFlag.lzop
+lzop: flag: already exists; not overwritten
+skipping picoFlag.lzop [flag]
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ls                   
+flag  flag.cpio  flag.out  Flag.pdf  picoFlag.lzop
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ subl flag            
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file flag    
+flag: lzip compressed data, version: 1
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lzip -d flag         
+lzip: flag.out: Output file already exists, skipping.
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ rm -r flag.out
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ lzip -d flag         
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ls          
+flag.cpio  flag.out  Flag.pdf  picoFlag.lzop
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file flag.out
+flag.out: XZ compressed data, checksum CRC64
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ mv flag.out flag.xz      
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ unxz flag.xzz       
+unxz: flag.xzz: No such file or directory
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ unxz flag.xz 
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ ls
+flag  flag.cpio  Flag.pdf  picoFlag.lzop
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ file flag    
+flag: ASCII text
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ subl flag
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ cat flag                       
+7069636f4354467b66316c656e406d335f6d406e3170756c407431306e5f
+6630725f3062326375723137795f37396230316332367d0a
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ 
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ xxd              
+^C
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ cat flag | xxd -r -p
+picoCTF{f1len@m3_m@n1pul@t10n_f0r_0b2cur17y_79b01c26}
+                                                                                                            
+┌──(kali㉿kali)-[~/picoCTF/Forensics/file_types]
+└─$ 
