@@ -18,7 +18,7 @@ picoCTF 2022 is basically a big cyber competition made for all kinds of folks, f
 
 ![picoCTF 2022](https://drive.google.com/uc?export=download&id=1iEEzmspiaYHA6N7P5KeLiPUxkbQ4DjYd)
 ![Image Description](https://drive.google.com/uc?export=download&id=1vwsgvdbqawTiah7ULsdwfHA2WL2FZgLp)
-
+![Second Image Description](https://drive.google.com/uc?export=download&id=1aloJMRLSQgq6Ya1FfzV5MSuzAGF5iLSj)
 
 
 ## Challenges
