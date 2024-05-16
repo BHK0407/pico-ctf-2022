@@ -1,0 +1,14 @@
+1. Get the file
+
+2. gunzip the file
+
+3. use command "mmls"
+
+4. search for the length "Linux"
+
+5. give the netcat "nc saturn.picoctf.net 58605"
+
+
+6 . enter the length that we searched before
+
+===> picoCTF{mm15_f7w!}
