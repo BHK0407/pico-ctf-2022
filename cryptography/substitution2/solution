@@ -1,0 +1,24 @@
+first get the file
+
+then use quipquip.com to decrypt
+
+we found that in the end of the paragraph:
+
+picoCTF{ n r m ny due a} ===> (1)
+
+comapre with the ascii file we have before "message.txt": 
+
+
+{G6D4U_4G41T515_15_73Y10A5_42JX1770} (2)
+
+
+
+So one is the group of characters that we can use to change in the (2) order by level
+
+For example : G ===> n; D ===> r, ...
+
+
+
+
+
+===> picoCTF{n6r4m_4n41y515_15_73d10u5_42ea1770}
