@@ -1,0 +1,14 @@
+1. First get link
+
+2. Check file and uses "strings" command
+
+3. uses command: "pdftotext + /file that download/ /file to extract(for example I make a text.txt"
+
+4. read text.txt
+
+
+
+
+
+
+picoCTF{C4n_Y0u_S33_m3_fully}

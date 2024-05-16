@@ -1,0 +1,8 @@
+https://artifacts.picoctf.net/c/195/network-dump.flag.pcap
+
+
+==> wireshark to open file
+
+===> flow by TCP
+
+===> picoCTF{p4ck37_5h4rk_b9d53765}
