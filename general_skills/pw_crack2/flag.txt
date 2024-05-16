@@ -1,0 +1,10 @@
+┌──(secretK㉿thebattle)-[~/picoCTF/general_skills/pw_crack2]
+└─$ python3 -c "print(chr(0x33) + chr(0x39) + chr(0x63) + chr(0x65))"  
+39ce
+                                                                                              
+┌──(secretK㉿thebattle)-[~/picoCTF/general_skills/pw_crack2]
+└─$ python3 level2.py                                                
+Please enter correct password for flag: 39ce
+Welcome back... your flag, user:
+picoCTF{tr45h_51ng1ng_502ec42e}
+

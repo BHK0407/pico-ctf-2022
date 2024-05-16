@@ -1,0 +1,30 @@
+1. get java file
+
+2. open that file and look at the encode key: cGwzYXMzX2wzdF9tM18xbnQwX3RoM19zYWYz
+
+
+3. Flag: 
+Option1: https://www.base64decode.org/
+
+Option2: 
+                                                                                                           
+┌──(kali㉿kali)-[~/picoCTF/reverse_engineering/safe_opener]
+└─$ echo "cGwzYXMzX2wzdF9tM18xbnQwX3RoM19zYWYz" | base64 -d
+pl3as3_l3t_m3_1nt0_th3_saf3                                                                                                           
+┌──(kali㉿kali)-[~/picoCTF/reverse_engineering/safe_opener]
+└─$ 
+
+
+┌──(kali㉿kali)-[~/picoCTF/reverse_engineering/safe_opener]
+└─$ echo "picoCTF{$(echo 'cGwzYXMzX2wzdF9tM18xbnQwX3RoM19zYWYz' | base64 -d)}"
+picoCTF{pl3as3_l3t_m3_1nt0_th3_saf3}
+                                                                                                           
+┌──(kali㉿kali)-[~/picoCTF/reverse_engineering/safe_opener]
+
+
+
+
+
+===> picoCTF{pl3as3_l3t_m3_1nt0_th3_saf3}
+
+

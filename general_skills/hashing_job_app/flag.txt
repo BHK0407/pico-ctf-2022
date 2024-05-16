@@ -1,0 +1,26 @@
+
+:::OPTION 1: CYBER CHEF:::
+
+
+└─$ nc saturn.picoctf.net 64617
+Please md5 hash the text between quotes, excluding the quotes: 'a used car lot'
+Answer: 
+1a78bc064f8df8b4192ce5f8972c9b80
+1a78bc064f8df8b4192ce5f8972c9b80
+Correct.
+Please md5 hash the text between quotes, excluding the quotes: 'chorus girls'
+Answer: 
+fdaf7298de6707185d68175ba4bd2f17
+fdaf7298de6707185d68175ba4bd2f17
+Correct.
+Please md5 hash the text between quotes, excluding the quotes: 'Australian outback'
+Answer: 
+fd14ff832f06adcdf5bb606ba606253a
+fd14ff832f06adcdf5bb606ba606253a
+Correct.
+
+picoCTF{4ppl1c4710n_r3c31v3d_674c1de2}
+                                       
+:::OPTION 2:::
+
+string_to_md5.py

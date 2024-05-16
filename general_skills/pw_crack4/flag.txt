@@ -1,0 +1,4 @@
+The same way to do PW_CRACK3, please check on flag.txt from it
+
+===> picoCTF{fl45h_5pr1ng1ng_ae0fb77c}
+
