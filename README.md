@@ -16,6 +16,9 @@ Welcome to my write-up for all challenges in picoCTF 2022.
 
 picoCTF 2022 is basically a big cyber competition made for all kinds of folks, from newbies to seasoned pros. They throw all sorts of challenges at you, covering everything from hacking to code-breaking. Here, I'm laying out how I tackled each challenge and what I learned along the way. Let's dive in!
 
+![picoCTF 2022](https://drive.google.com/file/d/1iEEzmspiaYHA6N7P5KeLiPUxkbQ4DjYd/view)
+
+
 ## Challenges
 
 ### Category 0: General Skills
